@@ -1,0 +1,52 @@
+<div class="row d-flex justify-content-around">
+    <div class="col-md-3 col-sm-6 ml-2 mr-2 col-lg-2 col-12">
+
+        <div (click)="openSignupModal(content)"  class="dashboard-container">
+            <div class="container-icon">
+                <i style="font-size: 80px;" class="fas fa-user-plus"></i>
+            </div>
+            <h5 class="text-center mt-3">Signup</h5>
+        </div>
+    </div>
+    <div (click)="openSignupModal(signin)" class="col-md-3 ml-2 col-sm-6 mr-2 col-lg-2 col-12">
+        <div class="dashboard-container">
+            <div class="container-icon">
+                <i style="font-size: 80px;" class="fas fa-sign-in-alt"></i>            
+            </div>
+            <h5 class="text-center mt-3">Sign In</h5>
+        </div>
+    </div>
+    <div class="col-md-3 ml-2 col-sm-6 mr-2 col-lg-2 col-12">
+        <div  class="dashboard-container">
+            <div class="container-icon">
+                <i style="color:var(--primary);font-size: 100px;" class="fas fa-users"></i>
+            </div>
+            <h5 class="text-center mt-3">User</h5>
+        </div>
+    </div>
+    <div class="col-md-3 ml-2 mr-2 col-sm-6 col-lg-2 col-12">
+        <div role="link" class="dashboard-container">
+            <div class="container-icon">
+                <img width="100px" height="100px" src="https://cloud.develop.soundblock.arena.com/deployments/382565b085fce45c0d7b8e76a10899917033e08d/assets/images/soundblock-fav.png">  
+                      </div>
+            <h5 class="text-center mt-3">Products</h5>
+        </div>
+    </div>
+    <div class="col-md-3 ml-2 col-sm-6 mr-2 col-lg-2 col-12">
+
+        <div class="dashboard-container">
+            <div class="container-icon">
+                <i style="font-size: 100px;" class="fas fa-users"></i>
+            </div>
+            <h5 class="text-center mt-3">Super Users</h5>
+        </div>
+    </div>
+</div>
+
+<ng-template #content>
+    <app-signup (onCloseModal)="onCloseModal($event)" [show]="signupmodalShow"></app-signup>
+</ng-template>
+
+<ng-template #signin>
+    <app-sign-in></app-sign-in>
+</ng-template>

@@ -1,0 +1,63 @@
+<ng-container >
+    <div class="schools">
+  
+      <div class="schools-head row">
+        <div class="col-md-12 col-sm-12">
+          <div>
+            <button class="btn btn-secondary btn-right-space"  (click)="addSchoolModalShow = true"> <i
+                class="fa fa-plus"></i> Add Product </button>
+            <button class="btn btn-warning" (click)="importSchoolModalShow = true"> Import Product </button>
+          </div>
+        </div>
+      </div>
+  
+      <section class="calendar-table">
+        <div class="card">
+          <div class="card-body">
+            <div class="record-related-dates">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Product Name*</th>
+                      <th scope="col">Product ID</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row">
+                        name
+                      </td>
+                      <td scope="row">id</td>
+                      <td>
+                        <div class="table-action">
+                          <div>
+                            <div class="dropdown dropleft dropdown-icon-hidden" ngbDropdown placement="bottom-right">
+                              <span id="dropdownMenuButton" ngbDropdownToggle>
+                                <i class="fa fa-ellipsis-h"></i>
+                              </span>
+                              <div ngbDropdownMenu role="menu" aria-labelledby="dropdownMenu1" class="dropdown-menu">
+                                <a class="dropdown-item" ><i
+                                    class="fa fa-edit"></i> Edit</a>
+                                <a class="dropdown-item"><i
+                                    class="fa fa-trash"></i> Delete</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+  
+  
+  
+                      </td>
+                    </tr>
+  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </ng-container>
